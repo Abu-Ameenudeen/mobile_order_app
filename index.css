@@ -3,6 +3,7 @@ body {
     font-family: 'Smythe', cursive;
 }
 
+/* header area */
 .banner {
     width: 100%;
     height: 200px;
@@ -31,4 +32,11 @@ body {
     margin-top: 0;
     font-size: 20px;
     font-weight: 100;
+}
+
+/* layour area */
+.banner-text,
+main {
+    width: 550px;
+    margin: 0 auto;
 }
