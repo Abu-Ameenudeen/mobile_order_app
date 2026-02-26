@@ -7,6 +7,16 @@ import { menuArray } from './data.js'
 const menuItemsEl = document.getElementById('menu-items-area')
 const checkoutEl = document.getElementById('checkout-area')
 
+// =============================
+// App State
+// =============================
+
+let cart = []
+
+// =============================
+// Render Menu
+// =============================
+
 function renderMenu() {
     const menuHtml = menuArray.map( (menu) => {
          return `
@@ -27,5 +37,70 @@ function renderMenu() {
     
     menuItemsEl.innerHTML = menuHtml  
 }
+
+// =============================
+// Add To Cart
+// =============================
+
+function addToCart(id) {
+    const selectedItem = menuArray.find( (item) => {
+        return item.id === Number(id)
+    })
+    cart.push(selectedItem)
+    renderCart()
+}
+
+// =============================
+// Render Cart
+// =============================
+
+function renderCart() {
+
+    if (cart.length === 0) {
+        checkoutEl.innerHTML = ''
+        return
+    }
+    
+    const totalPrice = cart.reduce( (totalAmt, item) => {
+        return totalAmt + item.price
+    }, 0)
+
+    const cartHtml = `
+    <h2 class="section-title">Your Order</h2>
+
+    <div class="order-items">
+        ${cart.map(item => `
+            <div class="order-row">
+                <span>${item.name}</span>
+                <span>$${item.price}</span>
+            </div>
+        `).join('')}
+    </div>
+
+    <div class="order-total-row">
+        <span>Total price:</span>
+        <span>$${totalPrice}</span>
+    </div>
+
+    <button class="place-order-btn">
+        Complete order
+    </button>
+    `
+    checkoutEl.innerHTML = cartHtml
+}
+
+// =============================
+// Event Delegation
+// =============================
+
+document.addEventListener('click', function(event) {
+    if (event.target.dataset.id) {
+        addToCart(event.target.dataset.id)
+    }
+})
+
+// =============================
+// Initialize App
+// =============================
 
 renderMenu()
