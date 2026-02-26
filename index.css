@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* ============================= */
 /* Base Styles */
 /* ============================= */
@@ -145,36 +149,94 @@ main,
 }
 
 /* ============================= */
-/* Modal */
+/* Modal Overlay */
 /* ============================= */
 
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.5);
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
 }
 
+
+/* ============================= */
+/* Modal Box */
+/* ============================= */
+
 .modal {
-    background: white;
-    padding: 30px;
+    background: #ffffff;
     width: 400px;
-    border-radius: 6px;
+    padding: 30px;
+    border-radius: 8px;
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ============================= */
+/* Modal Title */
+/* ============================= */
+
+.modal h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* Modal Inputs */
+/* ============================= */
 
 .modal input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 16px;
 }
+
+
+/* ============================= */
+/* Modal Button */
+/* ============================= */
 
 .modal button {
     width: 100%;
-    padding: 12px;
-    background: #16DB99;
+    padding: 14px;
+
+    background-color: #16DB99;
     color: white;
+
     border: none;
+    border-radius: 4px;
+
+    font-size: 16px;
     cursor: pointer;
+}
+
+
+/* ============================= */
+/* Success Message */
+/* ============================= */
+
+.success-message {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+
+    background-color: #D4F5E9;
+    color: #065F46;
+
+    text-align: center;
+    border-radius: 6px;
 }
