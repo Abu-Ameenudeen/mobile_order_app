@@ -1,6 +1,11 @@
 import { menuArray } from './data.js'
 
-const menuItemsArea = document.getElementById('menu-items-area')
+// =============================
+// DOM Elements
+// =============================
+
+const menuItemsEl = document.getElementById('menu-items-area')
+const checkoutEl = document.getElementById('checkout-area')
 
 function renderMenu() {
     const menuHtml = menuArray.map( (menu) => {
@@ -20,7 +25,7 @@ function renderMenu() {
     }
     ).join('') 
     
-    menuItemsArea.innerHTML = menuHtml  
+    menuItemsEl.innerHTML = menuHtml  
 }
 
 renderMenu()
