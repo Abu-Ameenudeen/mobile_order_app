@@ -2,7 +2,7 @@ import { menuArray } from './data.js'
 
 const menuItemsArea = document.getElementById('menu-items-area') 
 
-const getItemsFromArr = menuArray.map( (menu) => {
+const menuHtml = menuArray.map( (menu) => {
      return `
      <div class="img-text-btn"> 
         <div class="img-n-text"> 
@@ -19,8 +19,4 @@ const getItemsFromArr = menuArray.map( (menu) => {
 }
 ).join('') 
 
-function render() { 
-    menuItemsArea.innerHTML = getItemsFromArr 
-} 
-
-render()
+menuItemsArea.innerHTML = menuHtml  
