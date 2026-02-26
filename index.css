@@ -1,3 +1,34 @@
 body {
     margin: 0;
-} 
+    font-family: 'Smythe', cursive;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("./images/bgImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    padding: 20px 0px 0px 50px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.banner-text h1 {
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+.banner-text h2 {
+    letter-spacing: 1px;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 100;
+}
