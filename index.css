@@ -136,6 +136,7 @@ main,
 .place-order-btn {
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 40px;
     padding: 15px;
     background-color: #16DB99;
     color: white;
