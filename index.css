@@ -110,3 +110,35 @@ main,
     font-size: 30px;
     cursor: pointer;
 }
+
+/* ============================= */
+/* Cart section */
+/* ============================= */
+
+.section-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.order-row,
+.order-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-total-row {
+    border-top: 2px solid black;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
